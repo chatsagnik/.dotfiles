@@ -25,7 +25,7 @@
 font pango: Noto Sans Regular 10
 
 # picom
-exec --no-startup-id picom -b --experimental-backends --config ~/.picom/picom.conf
+exec --no-startup-id picom -b --experimental-backends --config ~/.config/picom/picom.conf
 
 # set the mod key to the winkey:
 set $mod Mod4
