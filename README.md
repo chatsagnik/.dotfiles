@@ -30,6 +30,7 @@ My setup
 Each of these things may be non-native to your specific distribution, or you may not want all of these on your system. In either case pick and choose what applications you want to install.
 
 # Extra Dependencies
+ - GNU stow
  - ls-deluxe for listing
  - nitrogen for setting wallpaper
  - pfetch / neofetch
