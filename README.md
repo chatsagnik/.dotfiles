@@ -2,7 +2,8 @@
 This is my .dotfiles folder containing my personal preferences. 
 The symlinks are managed using GNU stow.
 
-My setup
+# My setup
+
 |	Application		|	Type|
 |-------------------|---------------|
 |	OS				|	EndeavourOS	|
