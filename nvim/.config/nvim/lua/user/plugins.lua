@@ -52,6 +52,26 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
   use "lunarvim/colorschemes"
 
+  -- completion plugins
+  -- cmp plugins
+  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+
+  -- plugin for lsp
+  use "hrsh7th/cmp-nvim-lsp"
+
+  -- sources for autocompletions
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  -- use "hrsh7th/nvim-cmp-lua" -- lua autocompletions
+
+  -- LSP plugins
+  use "neovim/nvim-lspconfig" -- enables LSP
+  use "williamboman/nvim-lsp-installer" -- simple easy to use language server installer
+
 
 
 
