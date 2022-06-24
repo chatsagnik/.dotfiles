@@ -14,6 +14,8 @@ alias ...="cd ../.."
 alias cdh="cd ~"
 alias off="sudo poweroff"
 alias mkdir='mkdir -pv'
+alias showallprocess="ps -AH|less"
+
 # replace ls with ls-deluxe if installed
 if [ -e "/usr/bin/lsd" ];then
 	alias ls="lsd --group-dirs=first -a"
