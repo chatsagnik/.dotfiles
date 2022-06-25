@@ -69,6 +69,6 @@ let g:indentguides_tabchar = '|'
 " F5 will do a normal build for C with math linking. 
 " F6 will do a normal build for C++.
 
-nnoremap <F4> <Esc>:!gcc -g -lm -Wall output_debug %
-nnoremap <F5> <Esc>:!gcc -o -lm -Wall output %
+nnoremap <F4> <Esc>:!gcc -g -lm -Wall -o output_debug %
+nnoremap <F5> <Esc>:!gcc -lm -Wall -o output %
 
