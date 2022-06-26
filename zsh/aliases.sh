@@ -1,5 +1,4 @@
 ####### 
-# Aliases
 # general purpose aliases
 
 alias upgrade='sudo pacman -Syu'
@@ -9,14 +8,18 @@ alias path='echo -e ${PATH//:/\\n}'
 alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
-alias ..="cd .."
-alias ...="cd ../.."
-alias cdh="cd ~"
+alias ..="cd .. && pwd && ls"
+alias ...="cd ../.. && pwd && ls"
+alias cdh="cd ~ && ls"
 alias off="sudo poweroff"
 alias mkdir='mkdir -pv'
 alias showallprocess="ps -AH|less"
+alias soz="source ~/.zshrc"
 
 # replace ls with ls-deluxe if installed
+alias ls="lsd --group-dirs=first -a"
+alias ls='ls --color=auto'
+
 if [ -e "/usr/bin/lsd" ];then
 	alias ls="lsd --group-dirs=first -a"
 else
@@ -55,3 +58,11 @@ alias gpsh='git push origin'
 alias gst='git status'
 alias tag='git tag'
 alias newtag='git tag -a'
+
+# cd and ls
+# alias for cd doesn't support arguments so we have to use a function
+function cdl {
+	cd "$1"; 
+	echo "Current directory: $(pwd)";
+	ls;
+}
