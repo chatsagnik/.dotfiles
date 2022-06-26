@@ -61,8 +61,4 @@ alias newtag='git tag -a'
 
 # cd and ls
 # alias for cd doesn't support arguments so we have to use a function
-function cdl {
-	cd "$1"; 
-	echo "Current directory: $(pwd)";
-	ls;
-}
+cdl () { cd "$1" && echo "$(pwd)" && ls ; }

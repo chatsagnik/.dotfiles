@@ -15,6 +15,7 @@ The symlinks are managed using GNU stow.
 |	Compositor		|	yshui-picom	|
 |	App Launcher	|	rofi		|
 |	File navigator	|	ranger		|
+|	Sys info		|	neofetch	|
 
 # What projects are maintained
  - zsh
@@ -23,6 +24,7 @@ The symlinks are managed using GNU stow.
  - i3
  - Polybar
  - yshui-picom
+ - neofetch # Modified from https://gitlab.com/thelinuxcast/my-dots/-/blob/master/neofetch/config.conf
 
 # To be added to .dotfiles
  - rofi
