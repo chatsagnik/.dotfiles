@@ -29,6 +29,7 @@ The symlinks are managed using GNU stow.
 # To be added to .dotfiles
  - rofi
  - ranger
+ - installation file
 
 Each of these things may be non-native to your specific distribution, or you may not want all of these on your system. In either case pick and choose what applications you want to install.
 
