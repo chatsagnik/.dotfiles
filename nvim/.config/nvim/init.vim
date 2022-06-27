@@ -16,7 +16,6 @@ set cursorline
 syntax on
 
 call plug#begin()
-
 	Plug 'tpope/vim-commentary' " For Commenting gcc & gc
 	Plug 'vim-airline/vim-airline' " Status bar
 	Plug 'vim-airline/vim-airline-themes' " Use the deus theme
@@ -25,9 +24,11 @@ call plug#begin()
 	Plug 'jiangmiao/auto-pairs' " Auto completion of parantheses, brackets, etc
 	Plug 'gko/vim-coloresque' " Displaying colors of hexcodes and colors in terminal
 	Plug 'thaerkh/vim-indentguides' " Indentation guidelines: use Ctrl+M to open and close
-	Plug 'folke/tokyonight.nvim', { 'branch': 'main' } " Theme for Neovim
+	" Plug 'folke/tokyonight.nvim', { 'branch': 'main' } " Theme for Neovim
 	Plug 'akinsho/bufferline.nvim' " Buffer Line
 	Plug 'lewis6991/gitsigns.nvim' " Git marker Signs
+	Plug 'morhetz/gruvbox'
+	" Plug 'norcalli/nvim-colorizer.lua' " Nvim colorizer
 
 call plug#end()
 
@@ -43,7 +44,8 @@ let g:tokyonight_colors = {
 \ }
 
 " Load the colorscheme
-colorscheme tokyonight
+" colorscheme tokyonight
+colorscheme gruvbox
 
 " Setting the airline theme
 let g:airline_theme = 'deus'
