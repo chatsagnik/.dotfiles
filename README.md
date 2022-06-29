@@ -6,7 +6,7 @@ The symlinks are managed using GNU stow.
 
 |	Application		|	Type|
 |-------------------|---------------|
-|	OS				|	EndeavourOS	|
+|	OS				|	EndeavourOS (i3wm version)	|
 |	Shell			|	zsh			|
 |	Terminal		|	kitty		|
 |	Editor			|	neovim		|
