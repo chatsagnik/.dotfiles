@@ -1,5 +1,5 @@
 # What is this
-This is my .dotfiles folder containing my personal preferences. 
+This is my .dotfiles folder containing my personal settings. 
 The symlinks are managed using GNU stow.
 
 # My setup
@@ -18,7 +18,7 @@ The symlinks are managed using GNU stow.
 |	Sys info		|	neofetch	|
 
 # What projects are maintained
- - zsh
+ - zsh + various personal aliases
  - kitty
  - neovim
  - i3
@@ -34,7 +34,9 @@ The symlinks are managed using GNU stow.
 Each of these things may be non-native to your specific distribution, or you may not want all of these on your system. In either case pick and choose what applications you want to install.
 
 # Extra Dependencies
+(Do not install oh-my-zsh unless you specifically want something that comes with the framework)
  - GNU stow
+ - autotiling
  - ls-deluxe for listing
  - nitrogen for setting wallpaper
  - pfetch / neofetch
