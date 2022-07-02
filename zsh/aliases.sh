@@ -8,13 +8,15 @@ alias path='echo -e ${PATH//:/\\n}'
 alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
-alias ..="cd .. && pwd && ls"
-alias ...="cd ../.. && pwd && ls"
-alias cdh="cd ~ && ls"
+alias ..="cdl .."
+alias ...="cdl ../.."
+alias cdh="ccdl ~"
+alias cdweb="ccdl ~/Documents/personal-website"
 alias off="sudo poweroff"
 alias mkdir='mkdir -pv'
 alias showallprocess="ps -AH|less"
 alias soz="source ~/.zshrc"
+alias tree="ls --tree"
 
 # replace ls with ls-deluxe if installed
 alias ls="lsd --group-dirs=first -a"
@@ -62,3 +64,4 @@ alias newtag='git tag -a'
 # cd and ls
 # alias for cd doesn't support arguments so we have to use a function
 cdl () { cd "$1" && echo "$(pwd)" && ls ; }
+ccdl () { clear && cd "$1" && echo "$(pwd)" && ls ; }

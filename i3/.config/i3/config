@@ -223,6 +223,7 @@ assign [class="kitty"] $ws1
 assign [class="(?i)firefox"] $ws2
 assign [class="(?i)google-chrome"] $ws2
 assign [class="Thunar"] $ws3
+assign [class="thunderbird"] $ws7
 assign [class="Steam"] $ws9
 # assign [class="TelegramDesktop"] $ws5
 
@@ -232,6 +233,7 @@ for_window [class=(?i)firefox] focus
 for_window [class=(?i)google-chrome] focus
 for_window [class=Thunar] focus
 for_window [class=Steam] focus
+for_window [class=thunderbird] focus
 # for_window [class=TelegramDesktop] focus
 
 #############################################
