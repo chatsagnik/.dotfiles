@@ -27,6 +27,7 @@ call plug#begin()
 	Plug 'tpope/vim-commentary' " For Commenting gcc & gc
 	Plug 'vim-airline/vim-airline' " Status bar
 	Plug 'vim-airline/vim-airline-themes' " Use the deus theme
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 

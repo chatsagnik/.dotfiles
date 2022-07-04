@@ -2,6 +2,8 @@
 This is my .dotfiles folder containing my personal settings. 
 The symlinks are managed using GNU stow.
 
+<img src="./assets/workflow.png" alt="screenshot" width="500">
+
 # My setup
 
 |	Application		|	Type|
