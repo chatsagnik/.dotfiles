@@ -3,6 +3,7 @@
 
 alias upgrade='sudo pacman -Syu'
 alias pacin='sudo pacman -S'
+alias pacout='sudo pacman -R'
 alias paclean='sudo pacman -Sc'
 alias path='echo -e ${PATH//:/\\n}'
 alias now='date +"%T"'
@@ -11,12 +12,24 @@ alias nowdate='date +"%d-%m-%Y"'
 alias ..="cdl .."
 alias ...="cdl ../.."
 alias cdh="ccdl ~"
+alias cdot="ccdl ~/.dotfiles"
 alias cdweb="ccdl ~/Documents/personal-website"
 alias off="sudo poweroff"
 alias mkdir='mkdir -pv'
+alias cp="cp -riv"
+alias mv="mv -iv"
 alias showallprocess="ps -AH|less"
 alias soz="source ~/.zshrc"
 alias tree="ls --tree"
+
+# use trash instead of rm -rf
+trash () {
+	if [ ! -d "~/.trash" ];then
+		tname="trash" && tname="trash.${1}" && mv $1 ~/.trash/$tname
+	else
+		mkdir ~/.trash && tname="trash" && tname="trash.${1}" && mv $1 ~/.trash/$tname
+	fi
+}
 
 # replace ls with ls-deluxe if installed
 alias ls="lsd --group-dirs=first -a"

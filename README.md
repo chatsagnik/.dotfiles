@@ -2,7 +2,11 @@
 This is my .dotfiles folder containing my personal settings. 
 The symlinks are managed using GNU stow.
 
-<img src="./assets/workflow.png" alt="screenshot" width="1000">
+## Old screenshot
+<img src="./assets/workflow.png" alt="screenshot" width="1000"/>
+
+## New screenshot
+<img src="./assets/nordrice.png" alt="screenshot" width="1000"/>
 
 # My setup
 
@@ -38,7 +42,7 @@ Each of these things may be non-native to your specific distribution, or you may
 # Extra Dependencies
 (Do not install oh-my-zsh unless you specifically want something that comes with the framework)
  - GNU stow
- - autotiling
+ - autotiling for i3
  - ls-deluxe for listing
  - nitrogen for setting wallpaper
  - pfetch / neofetch
