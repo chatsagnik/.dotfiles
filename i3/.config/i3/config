@@ -38,8 +38,8 @@ new_window pixel 1
 
 # Set inner/outer gaps
 smart_gaps on
-gaps inner 15
-gaps outer 5
+gaps inner 3
+gaps outer 1
 
 smart_borders on
 smart_borders no_gaps

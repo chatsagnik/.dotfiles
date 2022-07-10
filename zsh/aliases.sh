@@ -24,10 +24,10 @@ alias tree="ls --tree"
 
 # use trash instead of rm -rf
 trash () {
-	if [ ! -d "~/.trash" ];then
-		tname="trash" && tname="trash.${1}" && mv $1 ~/.trash/$tname
+	if {"~/.trash" }; then
+		echo "inside if" && tname="trash" && tname="trash.${1}" && mv $1 ~/.trash/$tname
 	else
-		mkdir ~/.trash && tname="trash" && tname="trash.${1}" && mv $1 ~/.trash/$tname
+		echo $? && mkdir ~/.trash && tname="trash" && tname="trash.${1}" && mv $1 ~/.trash/$tname
 	fi
 }
 
