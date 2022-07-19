@@ -12,8 +12,10 @@ alias nowdate='date +"%d-%m-%Y"'
 alias ..="cdl .."
 alias ...="cdl ../.."
 alias cdh="ccdl ~"
-alias cdot="ccdl ~/.dotfiles"
+alias cddoc="ccdl ~/Documents"
+alias cddot="ccdl ~/.dotfiles"
 alias cdweb="ccdl ~/Documents/personal-website"
+alias cdblog="ccdl ~/Documents/blog"
 alias off="sudo poweroff"
 alias mkdir='mkdir -pv'
 alias cp="cp -riv"
@@ -21,6 +23,8 @@ alias mv="mv -iv"
 alias showallprocess="ps -AH|less"
 alias soz="source ~/.zshrc"
 alias tree="ls --tree"
+alias hss="hugo server --noHTTPCache"
+alias dl="youtube-dl"
 
 # use trash instead of rm -rf
 trash () {
