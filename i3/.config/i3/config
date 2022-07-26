@@ -17,7 +17,7 @@
 font pango: Noto Sans Regular 10
 
 # Display for second monitor
-exec --no-startup-id xrandr --output HDMI1 --auto --right-of eDPI &
+exec --no-startup-id xrandr --output HDMI1 --auto --right-of eDP1 &
 
 # Start picom
 exec --no-startup-id picom -b --experimental-backends --config ~/.config/picom/picom.conf
@@ -243,6 +243,8 @@ assign [class="(?i)firefox"] $ws2
 assign [class="(?i)google-chrome"] $ws2
 assign [class="Thunar"] $ws3
 assign [class="vlc"] $ws4
+assign [class="Zotero"] $ws5
+assign [class="Inkscape"] $ws
 # assign [class="thunderbird"] $ws7
 # assign [class="Steam"] $ws9
 # assign [class="TelegramDesktop"] $ws5
@@ -254,8 +256,11 @@ for_window [class=vlc] focus
 for_window [class=(?i)firefox] focus
 for_window [class=(?i)google-chrome] focus
 for_window [class=Thunar] focus
-for_window [class=Steam] focus
-for_window [class=thunderbird] focus
+for_window [class=Zotero] focus
+for_window [class=Inkscape] focus
+
+# for_window [class=Steam] focus
+# for_window [class=thunderbird] focus
 # for_window [class=TelegramDesktop] focus
 
 #############################################
