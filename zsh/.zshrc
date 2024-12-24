@@ -8,7 +8,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
 
-# Replacing powerlevel10k
+# Replacing powerlevel10k with ohmyposh
 # Oh-My-Posh terminal
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 
