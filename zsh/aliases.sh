@@ -1,4 +1,20 @@
 ####### 
+
+# alias cd with zoxide if preferred.......
+alias cd="z"
+
+# aliases for cd
+alias ..="cd .."
+alias ...="cd ../.."
+alias cdh="cd ~"
+alias doc="cd ~/Documents"
+alias dot="cd ~/.dotfiles"
+alias config="cd ~/.config"
+alias cdhl="ccdl ~"
+alias docl="ccdl ~/Documents"
+alias dotl="ccdl ~/.dotfiles"
+alias configl="ccdl ~/.config"
+
 # general purpose aliases
 
 alias upgrade='sudo pacman -Syu'
@@ -9,13 +25,7 @@ alias path='echo -e ${PATH//:/\\n}'
 alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
-alias ..="cdl .."
-alias ...="cdl ../.."
-alias cdh="ccdl ~"
-alias cddoc="ccdl ~/Documents"
-alias cddot="ccdl ~/.dotfiles"
-alias cdweb="ccdl ~/Documents/personal-website"
-alias cdblog="ccdl ~/Documents/blog"
+
 alias off="sudo poweroff"
 alias mkdir='mkdir -pv'
 alias cp="cp -riv"
@@ -45,6 +55,11 @@ else
 	alias ls='ls --color=auto'
 fi
 
+# cd and ls
+# alias for cd doesn't support arguments so we have to use a function
+cdl () { cd "$1" && echo "$(pwd)" && ls ; }
+ccdl () { clear && cd "$1" && echo "$(pwd)" && ls ; }
+
 # Editor aliases
 if [ -e "/usr/bin/vim" ]; then
 	alias v="vim"
@@ -67,18 +82,15 @@ alias fgrep='fgrep --color=auto'
 
 # Git aliases
 alias gadd='git add -A'
-alias gbr='git branch'
-alias gchkout='git checkout'
-alias gcln='git clone'
-alias gcmt='git commit -m'
-alias gftch='git fetch'
-alias gpl='git pull origin'
-alias gpsh='git push origin'
-alias gst='git status'
-alias tag='git tag'
-alias newtag='git tag -a'
+# alias gbr='git branch'
+# alias gchkout='git checkout'
+alias cln='git clone'
+alias cmmt='git commit -m'
+# alias gftch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias stat='git status'
+# alias tag='git tag'
+# alias newtag='git tag -a'
 
-# cd and ls
-# alias for cd doesn't support arguments so we have to use a function
-cdl () { cd "$1" && echo "$(pwd)" && ls ; }
-ccdl () { clear && cd "$1" && echo "$(pwd)" && ls ; }
+# source /path/to/zsh-autocomplete/zsh-autocomplete.plugin.zsh
