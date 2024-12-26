@@ -20,8 +20,9 @@ font pango: Roboto Mono Nerd Font 14
 exec --no-startup-id xrandr --output HDMI1 --auto --right-of eDP1 &
 
 # Start picom
-exec --no-startup-id picom -b --experimental-backends --config ~/.config/picom/picom.conf
+#exec --no-startup-id picom -b --experimental-backends --config ~/.config/picom/picom.conf
 
+exec --no-startup-id picom -b 
 # set the mod key to the winkey:
 set $mod Mod4
 
