@@ -14,7 +14,6 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 
 
 # display system info and source aliases
-# neofetch
 source ~/aliases.sh
 
 # History management
@@ -49,3 +48,5 @@ function man() {
 }
 
 eval "$(zoxide init zsh)"
+
+nerdfetch
