@@ -41,8 +41,10 @@ workspace_layout default
 # extra options for windows: #
 ##############################
 
-#border indicator on windows:
-new_window pixel 1
+#Hide window title bar
+default_border pixel 1
+default_floating_border pixel 1
+for_window [class="^.*"] border pixel 1
 
 # Set inner/outer gaps
 smart_gaps on
@@ -261,6 +263,7 @@ assign [class="Inkscape"] $ws
 for_window [class=Xfce4-terminal] focus
 for_window [class=alacritty] focus
 for_window [class=vlc] focus
+for_window [class=(?i)zen-browser] focus
 for_window [class=(?i)firefox] focus
 for_window [class=(?i)google-chrome] focus
 for_window [class=Thunar] focus
@@ -278,7 +281,7 @@ for_window [class=Inkscape] focus
 #get auth work with polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-# num lock activated
+# num lock activated on startup
 exec --no-startup-id numlockx on
 
 # start a script to setup displays
@@ -293,7 +296,7 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 
 # use xautolock to use autosuspend rules for mobile devices
 # https://wiki.archlinux.org/title/Session_lock#xautolock
-#exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
+exec --no-startup-id xautolock -time 300 -locker "systemctl suspend"
 
 # Desktop notifications
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrcpic
