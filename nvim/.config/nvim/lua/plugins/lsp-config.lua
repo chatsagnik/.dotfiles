@@ -1,55 +1,36 @@
 return {
   {
     "williamboman/mason.nvim",
-    lazy = false,
     config = function()
       require("mason").setup()
     end,
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    lazy = false,
-    opts = {
-      auto_install = true,
-    },
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed = { "lua_ls", "html", "marksman", "ltex", "pylyzer" },
+      })
+    end,
   },
   {
     "neovim/nvim-lspconfig",
-    lazy = false,
     config = function()
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
       local lspconfig = require("lspconfig")
-      lspconfig.html.setup({
-        capabilities = capabilities
-      })
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.cssls.setup({
-       capabilities = capabilities
-      })
-      
-      lspconfig.bashls.setup({
-        capabilities = capabilities
-      })
-      
-      lspconfig.marksman.setup({
-        capabilities = capabilities
-      })
-      
-      lspconfig.ltex_plus.setup({
-        capabilities = capabilities
-      })
+      -- We need node for Mason to install the language servers
+      -- Run yay -S npm for the lines below to work
 
+      lspconfig.lua_ls.setup({})
+      lspconfig.html.setup({})
+      lspconfig.marksman.setup({})
+      lspconfig.ltex.setup({})
+      lspconfig.pylyzer.setup({})
+
+      -- keymaps for LSP
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
+      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-      vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
-      vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, {})
     end,
   },
 }
-
