@@ -1,5 +1,6 @@
-####### 
-
+#######
+Aliases file
+#######
 # alias cd with zoxide if preferred.......
 alias cd="z"
 
