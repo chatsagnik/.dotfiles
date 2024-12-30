@@ -1,12 +1,20 @@
 #######
-Aliases file
+## Aliases file
 #######
-# alias cd with zoxide if preferred.......
-alias cd="z"
+# alias cd with zoxide if preferred....... 
+# alias cd="z"
+
+# replace ls with ls-deluxe if installed
+alias ls="lsd --group-dirs=first -a"
+alias ls='ls --color=auto'
+if [ -e "/usr/bin/lsd" ];then
+	alias ls="lsd --group-dirs=first -aht"
+else
+	alias ls='ls --color=auto -ath'
+fi
 
 # aliases for cd
 alias ..="cd .."
-alias ...="cd ../.."
 alias cdh="cd ~"
 alias doc="cd ~/Documents"
 alias dot="cd ~/.dotfiles"
@@ -31,7 +39,6 @@ alias off="sudo poweroff"
 alias mkdir='mkdir -pv'
 alias cp="cp -riv"
 alias mv="mv -iv"
-alias showallprocess="ps -AH|less"
 alias soz="source ~/.zshrc"
 alias tree="ls --tree"
 alias hss="hugo server --noHTTPCache"
@@ -46,15 +53,6 @@ trash () {
 	fi
 }
 
-# replace ls with ls-deluxe if installed
-alias ls="lsd --group-dirs=first -a"
-alias ls='ls --color=auto'
-
-if [ -e "/usr/bin/lsd" ];then
-	alias ls="lsd --group-dirs=first -a"
-else
-	alias ls='ls --color=auto'
-fi
 
 # cd and ls
 # alias for cd doesn't support arguments so we have to use a function
@@ -83,15 +81,17 @@ alias fgrep='fgrep --color=auto'
 
 # Git aliases
 alias gadd='git add -A'
-# alias gbr='git branch'
-# alias gchkout='git checkout'
 alias cln='git clone'
 alias cmmt='git commit -m'
-# alias gftch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
 alias stat='git status'
-# alias tag='git tag'
-# alias newtag='git tag -a'
 
-# source /path/to/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+# search for a file using fzf and open it in neovim
+alias fnv='nv $(fzf --preview="bat --color=always {}")'
+
+#use tab to select multiple files
+alias fmnv='nv $(fzf -m --preview="bat --color=always {}")'
