@@ -18,6 +18,10 @@ alias ..="cd .."
 alias cdh="cd ~"
 alias doc="cd ~/Documents"
 alias dot="cd ~/.dotfiles"
+alias nvdot="cd ~/.dotfiles/nvim/.config/nvim/"
+alias idot="cd ~/.dotfiles/i3/.config/i3/"
+alias polydot="cd ~/.dotfiles/polybar/.config/polybar/"
+alias zdot="cd ~/.dotfiles/zsh/.config/zsh/"
 alias config="cd ~/.config"
 alias cdhl="ccdl ~"
 alias docl="ccdl ~/Documents"
@@ -56,7 +60,7 @@ trash () {
 
 # cd and ls
 # alias for cd doesn't support arguments so we have to use a function
-cdl () { cd "$1" && echo "$(pwd)" && ls ; }
+cdl () { cd "$1" && echo "$(pwd)" && ls -h; }
 ccdl () { clear && cd "$1" && echo "$(pwd)" && ls ; }
 
 # Editor aliases
@@ -89,9 +93,7 @@ alias stat='git status'
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
-
 # search for a file using fzf and open it in neovim
 alias fnv='nv $(fzf --preview="bat --color=always {}")'
-
 #use tab to select multiple files
 alias fmnv='nv $(fzf -m --preview="bat --color=always {}")'
